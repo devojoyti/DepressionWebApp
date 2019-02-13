@@ -1,4 +1,6 @@
-# depressionapp
+# Depressionapp
+
+Web App for your daily dose of depression! 
 
 ## Project setup
 ```
