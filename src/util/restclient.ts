@@ -1,8 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-const GET_URL = 'http://13.233.128.239';
+const GET_URL = "http://13.233.128.239";
 const TIMEOUT = 1000;
-
 
 const restClient = {
     GET_DepressionQuotes() {
@@ -13,4 +12,3 @@ const restClient = {
 };
 
 export default restClient;
-

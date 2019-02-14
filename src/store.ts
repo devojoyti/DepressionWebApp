@@ -29,7 +29,7 @@ export default new Vuex.Store({
         },
         changeButtonMsgIndex(state) {
             state.buttomMsgIndex = Math.floor(
-                Math.random() * Math.floor(state.buttonMsg.length)
+                Math.random() * Math.floor(state.buttonMsg.length),
             );
         },
     },
@@ -37,11 +37,11 @@ export default new Vuex.Store({
         getDepressionQuote({ commit }) {
             restClient
                 .GET_DepressionQuotes()
-                .then(response => {
+                .then((response) => {
                     const payload: any = response.data;
                     commit("setQuote", payload);
                 })
-                .catch(error => {
+                .catch((error) => {
                     console.log("Error during HTTP request!");
                     console.log("Error is: ", error);
                 });

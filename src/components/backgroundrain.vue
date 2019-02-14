@@ -20,6 +20,10 @@ export default class Backgroundrain extends Vue {
     private isDrops: string = "";
     private isBackDrops: string = "";
 
+    public mounted() {
+        this.makeItRain();
+    }
+
     private makeItRain() {
         this.isDrops = "";
         this.isBackDrops = "";
@@ -29,14 +33,15 @@ export default class Backgroundrain extends Vue {
         let backDrops = "";
 
         while (increment < 100) {
-            //couple random numbers to use for various randomizations
-            //random number between 98 and 1
+            // couple random numbers to use for various randomizations
+            // random number between 98 and 1
             const randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
-            //random number between 5 and 2
+            // random number between 5 and 2
             const randoFiver = Math.floor(Math.random() * (5 - 2 + 1) + 2);
-            //increment
+            // increment
             increment += randoFiver;
-            //add in a new raindrop with various randomizations to certain CSS properties
+            // add in a new raindrop with various randomizations to certain CSS properties
+            /* tslint:disable:quotemark */
             drops +=
                 '<div class="drop" style="left: ' +
                 increment +
@@ -73,14 +78,10 @@ export default class Backgroundrain extends Vue {
                 "s; animation-duration: 0.5" +
                 randoHundo +
                 's;"></div></div>';
+            /* tslint:enable:quotemark */
         }
-
         this.isDrops = drops;
         this.isBackDrops = backDrops;
-    }
-
-    mounted() {
-        this.makeItRain();
     }
 }
 </script>
