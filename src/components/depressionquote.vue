@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <h5>{{ $store.getters.getDepressionQuote }}</h5>
-    <div class="button is-medium" v-on:click="getAnotherQuote()">{{ $store.getters.getButtonMsg }}</div>
+  <div class="msgbox">
+    <h1
+      class="has-text-centered has-text-grey-lighter is-size-5 has-text-weight-light"
+    >{{ $store.getters.getDepressionQuote }}</h1>
+    <div
+      class="button is-medium is-fullwidth nextquotebutton has-text-grey-lighter has-text-weight-light"
+      v-on:click="getAnotherQuote()"
+    >{{ $store.getters.getButtonMsg }}</div>
   </div>
 </template>
 
@@ -23,4 +28,14 @@ export default class Depressionquote extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.msgbox {
+    position: relative;
+    height: 100%;
+}
+
+.nextquotebutton {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(34, 35, 53);
+}
 </style>

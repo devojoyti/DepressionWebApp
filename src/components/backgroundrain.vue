@@ -83,7 +83,6 @@ export default class Backgroundrain extends Vue {
     width: 30rem;
     height: 18rem;
     position: absolute;
-    background-color: rgb(39, 41, 61);
     top: 0;
     bottom: 0;
     left: 0;
@@ -91,6 +90,8 @@ export default class Backgroundrain extends Vue {
     margin: auto;
     border-radius: 0.5rem;
     padding: 1rem;
+    z-index: 3;
+    background-color: rgb(39, 41, 61);
 }
 
 #body {
@@ -172,7 +173,6 @@ export default class Backgroundrain extends Vue {
     opacity: 1;
     transform: scale(0);
     animation: splat 0.5s linear infinite;
-    display: none;
 }
 
 #body .splat-toggle .splat {
@@ -196,57 +196,6 @@ export default class Backgroundrain extends Vue {
         opacity: 0;
         transform: scale(1.5);
     }
-}
-
-.toggles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-}
-
-.toggle {
-    position: absolute;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    line-height: 51px;
-    box-sizing: border-box;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.toggle:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.toggle:active {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.toggle.active {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.splat-toggle {
-    top: 20px;
-}
-
-.back-row-toggle {
-    top: 90px;
-    line-height: 12px;
-    padding-top: 14px;
-}
-
-.single-toggle {
-    top: 160px;
 }
 
 #body .single-toggle .drop {

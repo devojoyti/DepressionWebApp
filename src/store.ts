@@ -8,7 +8,12 @@ export default new Vuex.Store({
     state: {
         quote: "",
         buttomMsgIndex: 0,
-        buttonMsg: ["More depression", "More like this..", "Next one!"],
+        buttonMsg: [
+            "More depression",
+            "More like this..",
+            "Next one!",
+            "Haha..More!",
+        ],
     },
     getters: {
         getDepressionQuote(state) {
