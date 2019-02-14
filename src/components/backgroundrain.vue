@@ -1,7 +1,11 @@
 <template>
   <div id="body">
-    <div class="rain front-row"></div>
-    <div class="rain back-row"></div>
+    <div class="rain front-row">
+      <div v-html="isDrops"></div>
+    </div>
+    <div class="rain back-row">
+      <div v-html="isBackDrops"></div>
+    </div>
     <div id="slot">
       <slot></slot>
     </div>
@@ -10,12 +14,15 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import $ from "jquery";
 
 @Component
 export default class Backgroundrain extends Vue {
+    private isDrops: string = "";
+    private isBackDrops: string = "";
+
     private makeItRain() {
-        $(".rain").empty();
+        this.isDrops = "";
+        this.isBackDrops = "";
 
         let increment = 0;
         let drops = "";
@@ -68,8 +75,8 @@ export default class Backgroundrain extends Vue {
                 's;"></div></div>';
         }
 
-        $(".rain.front-row").append(drops);
-        $(".rain.back-row").append(backDrops);
+        this.isDrops = drops;
+        this.isBackDrops = backDrops;
     }
 
     mounted() {
