@@ -21,6 +21,14 @@ export default class App extends Vue {}
 <style>
 html,
 body {
+    width: 100%;
     height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+* {
+    outline: 1px solid red !important;
 }
 </style>

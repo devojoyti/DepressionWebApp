@@ -44,9 +44,9 @@ export default class Backgroundrain extends Vue {
             /* tslint:disable:quotemark */
             drops +=
                 '<div class="drop" style="left: ' +
-                increment +
+                Math.min(increment, 78) +
                 "%; bottom: " +
-                (randoFiver + randoFiver - 1 + 100) +
+                Math.min(randoFiver + randoFiver - 1 + 100, 100) +
                 "%; animation-delay: 0." +
                 randoHundo +
                 "s; animation-duration: 0.5" +
