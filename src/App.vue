@@ -27,8 +27,4 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
-
-* {
-    outline: 1px solid red !important;
-}
 </style>
