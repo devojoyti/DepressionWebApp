@@ -13,7 +13,7 @@ export default new Vuex.Store({
             "More like this..",
             "Next one!",
             "Haha..More!",
-            "Still willing to die?"
+            "Still willing to die?",
         ],
     },
     getters: {
