@@ -42,6 +42,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/*.zip' 
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
     
 
