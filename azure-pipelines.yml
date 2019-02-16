@@ -34,8 +34,14 @@ steps:
       dist/**/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
+- task: ArchiveFiles@1
+  inputs:
+    rootFolder: '$(Build.ArtifactStagingDirectory)/dist/'
+    archiveType: default
+    archiveFile: (Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/*.zip' 
     
 
