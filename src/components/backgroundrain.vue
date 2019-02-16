@@ -88,8 +88,10 @@ export default class Backgroundrain extends Vue {
 
 <style>
 #slot {
-    width: 30rem;
-    height: 18rem;
+    max-width: 30rem;
+    max-height: 18rem;
+    width: 70vw;
+    height: 40vh;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -104,7 +106,7 @@ export default class Backgroundrain extends Vue {
 
 #body {
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     background: linear-gradient(to bottom, #202020, #111119);
 }
 
@@ -128,8 +130,8 @@ export default class Backgroundrain extends Vue {
 .drop {
     position: absolute;
     bottom: 100%;
-    width: 15px;
-    height: 120px;
+    width: 5rem;
+    height: 10rem;
     pointer-events: none;
     animation: drop 0.5s linear infinite;
 }
@@ -149,7 +151,7 @@ export default class Backgroundrain extends Vue {
 .stem {
     width: 1px;
     height: 60%;
-    margin-left: 7px;
+    margin-left: 2rem;
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0),
@@ -174,9 +176,9 @@ export default class Backgroundrain extends Vue {
 }
 
 .splat {
-    width: 15px;
-    height: 10px;
-    border-top: 2px dotted rgba(255, 255, 255, 0.5);
+    width: 1rem;
+    height: 0.5rem;
+    border-top: 0.5rem dotted rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     opacity: 1;
     transform: scale(0);
