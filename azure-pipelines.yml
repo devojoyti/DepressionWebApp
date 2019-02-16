@@ -36,7 +36,8 @@ steps:
 
 - task: ArchiveFiles@1
   inputs:
-    rootFolder: '$(Build.ArtifactStagingDirectory)/dist/**/*'
+    rootFolder: '$(Build.ArtifactStagingDirectory)/dist/'
+    includeRootFolder: false
     archiveType: default
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
