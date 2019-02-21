@@ -1,5 +1,13 @@
 <template>
   <div id="body">
+    <Footer v-bind:attachToBottom="false">
+      <p class="has-text-right has-text-grey-lighter has-text-weight-light">
+        Want to contribute your sadness?
+        <a href="https://github.com/devojoyti/DepressionWebApp">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
+    </Footer>
     <div class="rain front-row">
       <div v-html="isDrops"></div>
     </div>
@@ -9,13 +17,26 @@
     <div id="slot">
       <slot></slot>
     </div>
+    <Footer v-bind:attachToBottom="true">
+      <p class="has-text-centered has-text-grey-lighter has-text-weight-light">
+        Made with
+        <i id="heartbroken" class="fas fa-heart-broken"></i> by
+        <a href="https://github.com/shril/">Shril</a> and
+        <a href="https://github.com/devojoyti">Dev</a>
+      </p>
+    </Footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import Footer from "./footer.vue";
 
-@Component
+@Component({
+    components: {
+        Footer,
+    },
+})
 export default class Backgroundrain extends Vue {
     private isDrops: string = "";
     private isBackDrops: string = "";
@@ -87,6 +108,10 @@ export default class Backgroundrain extends Vue {
 </script>
 
 <style>
+#heartbroken {
+    color: rgb(121, 8, 8);
+}
+
 #slot {
     max-width: 30rem;
     max-height: 18rem;
