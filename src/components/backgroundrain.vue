@@ -21,8 +21,8 @@
       <p class="has-text-centered has-text-grey-lighter has-text-weight-light">
         Made with
         <i id="heartbroken" class="fas fa-heart-broken"></i> by
-        <a href="https://github.com/shril/">Shril</a> and
-        <a href="https://github.com/devojoyti">Dev</a>
+        <a href="https://github.com/devojoyti">Dev</a> and
+        <a href="https://github.com/shril/">Shril</a>
       </p>
     </Footer>
   </div>
