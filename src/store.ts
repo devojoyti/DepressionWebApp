@@ -26,7 +26,9 @@ export default new Vuex.Store({
     },
     mutations: {
         setQuote(state, payload: any) {
-            state.quote = payload;
+            // state.quote = payload;
+            // Because my new API is sending in JSON format...
+            state.quote = payload.quotes;
         },
         changeButtonMsgIndex(state) {
             state.buttomMsgIndex = Math.floor(

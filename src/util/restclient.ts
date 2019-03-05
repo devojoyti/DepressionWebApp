@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const GET_URL = "http://13.233.128.239";
+const GET_URL = "https://depressionapi.azurewebsites.net/";
 const TIMEOUT = 1000;
 
 const restClient = {
